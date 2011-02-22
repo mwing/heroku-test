@@ -1,7 +1,6 @@
 require 'rubygems'
-require 'bundler'
-Bundler.setup
-
+#require 'bundler'
+#Bundler.setup
 require 'sinatra/base'
 class MyApp < Sinatra::Base
 
