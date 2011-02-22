@@ -3,9 +3,10 @@ require 'rubygems'
 #Bundler.setup
 require 'sinatra/base'
 require 'mongo_mapper'
-require 'docs'
-MongoMapper.connection = Mongo::Connection.from_uri(ENV["MONGOHQ_URL"]) if ENV["MONGOHQ_URL"]
+require File.join(File.dirname(__FILE__), 'docs')
 
+MongoMapper.connection = Mongo::Connection.from_uri(ENV["MONGOHQ_URL"]) if ENV["MONGOHQ_URL"]
+MongoMapper.database = "mydb"
 class MyApp < Sinatra::Base
   get '/' do
     "Hello world, it's #{Time.now} at the server!"
