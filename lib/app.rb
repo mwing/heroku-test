@@ -1,6 +1,6 @@
 require 'rubygems'
-#require 'bundler'
-#Bundler.setup
+require 'bundler'
+Bundler.setup
 require 'sinatra/base'
 require 'mongo_mapper'
 require File.join(File.dirname(__FILE__), 'docs')
