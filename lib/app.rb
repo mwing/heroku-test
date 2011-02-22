@@ -5,8 +5,13 @@ require 'sinatra/base'
 require 'mongo_mapper'
 require File.join(File.dirname(__FILE__), 'docs')
 
-MongoMapper.connection = Mongo::Connection.from_uri(ENV["MONGOHQ_URL"]) if ENV["MONGOHQ_URL"]
-MongoMapper.database = "mydb"
+if ENV["MONGOHQ_URL"]
+  MongoMapper.connection = Mongo::Connection.from_uri(ENV["MONGOHQ_URL"]) 
+  MongoMapper.database = URI.parse(ENV['MONGOHQ_URL']).path.gsub(/^\//, '')
+else
+  MongoMapper.database = "localhost_test"
+end
+
 class MyApp < Sinatra::Base
   get '/' do
     "Hello world, it's #{Time.now} at the server!"
