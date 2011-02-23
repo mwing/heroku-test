@@ -23,8 +23,8 @@ class MyApp < Sinatra::Base
   }
   
   get '/' do
-    @title = "Welcome!"
-    mustache :index
+  @title = "Booky!"
+  mustache :index
   end
   
   #get for now, can't be arsed to do a form for post

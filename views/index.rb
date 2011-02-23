@@ -1,7 +1,7 @@
 class MyApp
   module Views
     class Index < Layout
-      def content
+      def header
         "Welcome! Mustache lives."
       end
     end
