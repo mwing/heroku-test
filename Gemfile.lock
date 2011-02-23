@@ -13,6 +13,7 @@ GEM
       activesupport (>= 2.3.4)
       jnunemaker-validatable (~> 1.8.4)
       plucky (~> 0.3.6)
+    mustache (0.12.1)
     plucky (0.3.6)
       mongo (~> 1.1)
     rack (1.2.1)
@@ -28,4 +29,5 @@ DEPENDENCIES
   bson_ext
   i18n
   mongo_mapper
+  mustache
   sinatra

@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.setup
 require 'sinatra/base'
 require 'mongo_mapper'
+require 'mustache/sinatra'
 require File.join(File.dirname(__FILE__), 'docs')
 
 if ENV["MONGOHQ_URL"]
@@ -13,8 +14,17 @@ else
 end
 
 class MyApp < Sinatra::Base
+  register Mustache::Sinatra
+  require File.join(File.dirname(__FILE__), "..", '/views/layout')
+
+  set :mustache, {
+    :views     => 'views/',
+    :templates => 'templates/'
+  }
+  
   get '/' do
-    "Hello world, it's #{Time.now} at the server!"
+    @title = "Welcome!"
+    mustache :index
   end
   
   #get for now, can't be arsed to do a form for post
