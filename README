@@ -1,2 +1,103 @@
 Nothing to see here, this is just a test app for heroku
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're still here? Go away.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ok, some future plans...
+
+* Rest api to create events
+** create new, edit existing(auth)
+** selection options
+
+* Authentication (something simple)
+** user / pass
+
+* Allow anonymous modification (based on creation)
+* Use login info for modification if available
+
+* RxJs frontend with JQuery Ajax
+* HTML 5
+* CSS3
+
